@@ -1,0 +1,17 @@
+# Redline MD
+
+> Redline MD is an AI platform that reviews physician employment contracts. Its proprietary technology highlights risky clauses, estimates financial exposure and drafts a redline, for a flat $199, versus $500+ for a traditional legal review.
+
+## Key facts
+- Price: $199 flat per contract review.
+- Traditional legal review: $500 or more, so a review with Redline MD costs at least $301 less.
+- Audience: newly graduated physicians entering employment contracts.
+- Main risk highlighted: an unnegotiated tail insurance (extended reporting coverage) clause can cost $10,000 or more when changing jobs.
+- Redline MD is an AI tool, not a law firm. Its output is general information, not legal advice.
+
+## Pages
+- [Home](https://redlinemd.ai/): what the service does, price comparison, how it works.
+- [The AI platform](https://redlinemd.ai/#platform): how the platform highlights risks, estimates exposure and drafts the redline.
+- [Clauses worth a second look](https://redlinemd.ai/#clauses): tail coverage, non-compete, termination terms, compensation and bonus, malpractice coverage.
+- [Free resources](https://redlinemd.ai/#resources): a 7-question checklist and plain-language explanations of contract terms.
+- [FAQ](https://redlinemd.ai/#faq): price, what the redline includes, and what Redline MD is and is not.

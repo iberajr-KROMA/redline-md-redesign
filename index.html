@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>document.documentElement.className+=' js'</script>
+<title>AI Physician Contract Review, Flat $199 | Redline MD</title>
+<meta name="description" content="Redline MD is an AI platform that reviews physician employment contracts. Get a redline for a flat $199, versus $500+ for a traditional legal review.">
+<!-- Staging note: while this lives on a preview domain, switch the robots tag below to "noindex". Restore at launch. -->
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://redlinemd.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Redline MD">
+<meta property="og:title" content="AI contract review for physicians, before you sign | Redline MD">
+<meta property="og:description" content="Redline MD is an AI platform for physician employment contracts. Upload yours and get a redline for a flat $199, versus $500+ for a traditional legal review.">
+<meta property="og:url" content="https://redlinemd.ai/">
+<meta property="og:image" content="https://redlinemd.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2F6BFF">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preload" as="image" href="images/hero-doctor.webp" type="image/webp" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/manrope-latin-wght-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/newsreader-latin-wght-normal.woff2" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Service", "name": "Redline MD AI contract review platform for physicians", "serviceType": "Physician employment contract review", "description": "AI platform that reviews a physician employment contract, highlights risks and drafts a redline for a flat $199, compared with $500+ for a traditional legal review.", "provider": {"@type": "Organization", "name": "Redline MD", "url": "https://redlinemd.ai", "logo": "https://redlinemd.ai/images/logo-redline-md.png"}, "audience": {"@type": "Audience", "audienceType": "Newly graduated physicians"}, "offers": {"@type": "Offer", "price": "199", "priceCurrency": "USD", "url": "https://redlinemd.ai/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Redline MD", "url": "https://redlinemd.ai/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the Redline MD AI platform?", "acceptedAnswer": {"@type": "Answer", "text": "Redline MD is an AI platform that reviews physician employment contracts. Its proprietary technology highlights risky clauses, estimates financial exposure and drafts a redline you can bring to your employer, for a flat $199."}}, {"@type": "Question", "name": "How much does a contract review cost?", "acceptedAnswer": {"@type": "Answer", "text": "A review costs a flat $199. A traditional legal review costs $500 or more, so you keep at least $301 compared with that."}}, {"@type": "Question", "name": "Who is Redline MD for?", "acceptedAnswer": {"@type": "Answer", "text": "Redline MD is designed for newly graduated physicians who are about to sign an employment contract and want to understand it before they do."}}, {"@type": "Question", "name": "What is tail insurance and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "Tail insurance, also called extended reporting coverage, protects you from malpractice claims filed after a claims-made policy ends. If your contract makes you pay for it when you leave, the cost can reach $10,000 or more. Checking who pays before you sign lets you negotiate it."}}, {"@type": "Question", "name": "What does the redline include?", "acceptedAnswer": {"@type": "Answer", "text": "The redline marks clauses that put you at risk, such as tail coverage, non-compete terms and termination language, and shows proposed changes you can bring to your employer."}}, {"@type": "Question", "name": "Does Redline MD replace a lawyer?", "acceptedAnswer": {"@type": "Answer", "text": "No. Redline MD is an AI tool, not a law firm, and it does not provide legal advice. It gives you a fast, lower-cost first review and a clearer picture of what to negotiate. For complex situations, consider asking an attorney."}}, {"@type": "Question", "name": "How do I use the redline in a negotiation?", "acceptedAnswer": {"@type": "Answer", "text": "Treat the marked clauses as a checklist of what to ask for: who pays for tail coverage, how far a non-compete reaches, how termination works. Bring the proposed changes to your employer and negotiate before you sign."}}]}</script>
+<style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/manrope-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:200 800;font-display:swap;src:url('fonts/newsreader-latin-wght-normal.woff2') format('woff2')}
+:root{
+  --blue:#2F6BFF; --blue-600:#2358E0; --blue-800:#173DA6; --blue-950:#0B1F5C;
+  --sky:#E8EFFF; --sky-50:#F4F7FF; --white:#FFFFFF;
+  --ink:#0E1630; --muted:#56607A; --line:#D9E3F8;
+  --red:#D92D20; --red-bg:#FDECEA; --green:#0E8A4F; --green-bg:#E2F5EA;
+  --r-xl:32px; --r-lg:24px; --r-md:16px;
+  --font:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --serif:'Newsreader',Georgia,'Times New Roman',serif;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;font-family:var(--font);font-size:1rem;line-height:1.6;color:var(--ink);background:var(--sky);
+  padding-bottom:calc(92px + env(safe-area-inset-bottom));-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img,svg,video{display:block;max-width:100%}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+a{color:inherit}
+svg.ic{width:1.25em;height:1.25em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:12px;top:-60px;background:var(--blue);color:#fff;padding:10px 16px;border-radius:999px;z-index:90;font-weight:700}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.shell{width:min(1280px,100% - 24px);margin-inline:auto;padding-bottom:clamp(24px,4vw,56px)}
+
+/* Scroll reveal (only when JS is on) */
+.js [data-reveal]{opacity:0;transform:translateY(30px);transition:opacity .85s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .85s cubic-bezier(.2,.7,.2,1) var(--d,0s)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+[data-parallax]{will-change:transform}
+
+/* Buttons */
+.btn-pill{
+  display:inline-flex;align-items:center;justify-content:space-between;gap:16px;
+  height:58px;padding:0 9px 0 28px;border:0;border-radius:999px;cursor:pointer;
+  background:var(--blue);color:#fff;font:700 1rem/1 var(--font);text-decoration:none;
+  transition:background-color .2s ease,transform .2s ease;
+}
+.btn-pill:hover{background:var(--blue-600)}
+.btn-pill:active{transform:translateY(1px)}
+.btn-pill__ic{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--blue);display:grid;place-items:center;flex:none}
+.btn-pill__ic svg{width:20px;height:20px}
+.btn-pill--sm{height:46px;padding:0 7px 0 20px;font-size:.9375rem}
+.btn-pill--sm .btn-pill__ic{width:32px;height:32px}
+.btn-pill--sm .btn-pill__ic svg{width:17px;height:17px}
+.btn-pill--white{background:#fff;color:var(--blue)}
+.btn-pill--white:hover{background:var(--sky)}
+.btn-pill--white .btn-pill__ic{background:var(--blue);color:#fff}
+.btn-pill--block{width:100%}
+
+/* Navigation: transparent at the top, solid white once you scroll. Always visible. */
+.nav{
+  position:fixed;z-index:60;top:0;left:0;right:0;
+  transition:background-color .3s ease,box-shadow .3s ease;
+}
+.nav.is-compact,.nav.is-open{
+  background:rgba(255,255,255,.94);box-shadow:0 8px 28px rgba(15,42,122,.10);
+  -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);
+}
+.nav__bar{
+  width:min(1280px,100% - 24px);margin-inline:auto;height:76px;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;transition:height .3s ease;
+}
+.nav.is-compact .nav__bar{height:64px}
+.brand{display:inline-flex;align-items:center;text-decoration:none}
+.brand img{height:30px;width:auto;transition:height .3s ease}
+.nav.is-compact .brand img{height:27px}
+.nav__links{display:none;position:relative;gap:2px}
+.nav__links a{position:relative;z-index:1;padding:10px 16px;border-radius:999px;font-size:.9375rem;font-weight:600;text-decoration:none;color:var(--ink);transition:color .2s}
+.nav__links a.is-active{color:var(--blue)}
+.nav__pill{
+  position:absolute;z-index:0;top:2px;bottom:2px;left:0;width:0;border-radius:999px;background:rgba(47,107,255,.11);opacity:0;
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),width .35s cubic-bezier(.2,.8,.2,1),opacity .2s;
+}
+.nav__right{display:flex;align-items:center;gap:8px}
+.nav__cta{display:none}
+.nav__menu{width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.85);color:var(--ink);cursor:pointer;display:grid;place-items:center;box-shadow:0 2px 10px rgba(15,42,122,.10)}
+.nav__menu svg{width:22px;height:22px;grid-area:1/1;transition:opacity .2s,transform .3s}
+.nav__menu .i-close{opacity:0;transform:rotate(-90deg)}
+.nav.is-open .nav__menu .i-open{opacity:0;transform:rotate(90deg)}
+.nav.is-open .nav__menu .i-close{opacity:1;transform:none}
+.sheet{
+  position:absolute;left:12px;right:12px;top:calc(100% + 6px);padding:12px;border-radius:28px;
+  background:#fff;box-shadow:0 24px 60px rgba(15,42,122,.22);border:1px solid var(--line);
+  visibility:hidden;opacity:0;transform:translateY(-10px) scale(.98);transform-origin:top center;
+  transition:opacity .25s ease,transform .3s cubic-bezier(.2,.8,.2,1),visibility 0s .3s;
+}
+.nav.is-open .sheet{visibility:visible;opacity:1;transform:none;transition-delay:0s}
+.sheet a.sheet__link{
+  display:flex;align-items:center;justify-content:space-between;padding:15px 16px;border-radius:16px;
+  font-weight:700;font-size:1.0625rem;text-decoration:none;
+  opacity:0;transform:translateY(-6px);transition:opacity .3s ease,transform .3s ease,background-color .15s;
+}
+.sheet a.sheet__link:hover{background:var(--sky)}
+.nav.is-open .sheet a.sheet__link{opacity:1;transform:none}
+.nav.is-open .sheet a.sheet__link:nth-child(1){transition-delay:.04s}
+.nav.is-open .sheet a.sheet__link:nth-child(2){transition-delay:.08s}
+.nav.is-open .sheet a.sheet__link:nth-child(3){transition-delay:.12s}
+.nav.is-open .sheet a.sheet__link:nth-child(4){transition-delay:.16s}
+.nav.is-open .sheet a.sheet__link:nth-child(5){transition-delay:.2s}
+.nav.is-open .sheet a.sheet__link:nth-child(6){transition-delay:.24s}
+.sheet__cta{margin-top:8px}
+
+/* Panels */
+.panel{margin-top:12px;border-radius:var(--r-xl);padding:clamp(24px,5vw,72px);background:#fff}
+.panel--sky{background:var(--sky-50)}
+.panel--blue{
+  color:#fff;
+  background:
+    radial-gradient(circle at 12% 18%,rgba(255,255,255,.20),transparent 34%),
+    radial-gradient(circle at 88% 82%,rgba(255,255,255,.14),transparent 40%),
+    var(--blue);
+}
+h2.title{font:800 clamp(1.9rem,4.6vw,3.4rem)/1.04 var(--font);letter-spacing:-.035em;text-wrap:balance}
+.lede{margin-top:16px;color:var(--muted);font-size:1.0625rem;max-width:36em}
+.panel--blue .lede{color:rgba(255,255,255,.86)}
+
+
+/* HERO */
+.hero{
+  position:relative;isolation:isolate;overflow:hidden;margin:0 0 12px;border-radius:0 0 var(--r-xl) var(--r-xl);
+  background:linear-gradient(135deg,#E6EEFF 0%,#D5E3FF 100%);
+  padding:calc(76px + clamp(16px,3vw,36px)) 0 0;
+}
+.hero__inner{width:min(1280px,100% - 24px);margin-inline:auto;padding:0 clamp(16px,3.5vw,48px)}
+.hero__bg{position:absolute;inset:0;z-index:-3;opacity:.3;pointer-events:none;background:url('hero-bg-poster.jpg') center/cover no-repeat;overflow:hidden}
+.hero__bg .vwrap{position:absolute;left:0;right:0;top:-8%;height:116%}
+.hero__bg video{width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;background:rgba(47,107,255,.12);mix-blend-mode:multiply}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,rgba(230,238,255,.72) 0%,rgba(230,238,255,.30) 60%,rgba(230,238,255,0) 100%);
+}
+.hero__grid{display:grid;gap:0}
+.hero__copy{padding:12px 4px 26px}
+.hero h1{font:800 clamp(2.7rem,12.4vw,6rem)/.96 var(--font);letter-spacing:-.05em;color:var(--ink)}
+.hero h1 span.line{display:block}
+.hero h1 .o{position:relative;color:transparent}
+.hero h1 .o::after{
+  content:"";position:absolute;left:50%;top:60%;width:.5em;height:.5em;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#B7CCFF 0%,#2F6BFF 46%,#173DA6 100%);box-shadow:0 .06em .12em rgba(23,61,166,.35);
+}
+.hero__lead{margin-top:20px;font-size:clamp(1.0625rem,2.4vw,1.1875rem);color:#44506B;max-width:31em}
+.hero__lead strong{color:var(--ink);font-weight:700}
+
+.up{margin-top:26px;max-width:560px;padding:12px;border-radius:26px;background:rgba(255,255,255,.94);border:1px solid var(--line);box-shadow:0 14px 36px rgba(15,42,122,.10)}
+.drop{
+  display:flex;align-items:center;gap:14px;min-height:92px;padding:14px 16px;border-radius:18px;cursor:pointer;
+  background:var(--sky-50);border:2px dashed #9DB8F7;transition:background-color .15s,border-color .15s;
+}
+.drop:hover,.drop.over{background:var(--sky);border-color:var(--blue)}
+.drop:focus-within{outline:3px solid var(--blue);outline-offset:3px}
+.drop.has-file{border-style:solid;border-color:var(--green);background:var(--green-bg)}
+.drop__ic{width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;flex:none}
+.drop__ic svg{width:22px;height:22px}
+.drop__txt{min-width:0}
+.drop__title{display:block;font-weight:700;font-size:1.0625rem;line-height:1.3;overflow-wrap:anywhere}
+.drop__sub{display:block;font-size:.9rem;color:var(--muted)}
+.up .btn-pill{margin-top:10px}
+.up__fine{margin-top:10px;text-align:center;font-size:.9rem;color:var(--muted)}
+.up__status{min-height:1.3em;margin-top:4px;text-align:center;font-size:.9rem;font-weight:600;color:var(--green)}
+
+.mini{
+  margin-top:22px;max-width:560px;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;
+  padding:16px 18px;border-radius:22px;background:rgba(255,255,255,.94);border:1px solid var(--line);
+}
+.mini div+div{padding-left:14px;border-left:1px solid var(--line)}
+.mini b{display:block;font:800 clamp(1.3rem,4.6vw,1.85rem)/1 var(--font);letter-spacing:-.04em}
+.mini b i{font-style:normal;color:var(--blue)}
+.mini span{display:block;margin-top:6px;font-size:.78rem;line-height:1.3;color:var(--muted)}
+.who{margin-top:18px;display:flex;align-items:center;gap:14px;max-width:560px}
+.who p{font-size:.9375rem;line-height:1.4;color:#44506B;max-width:18em}
+.avatars{display:inline-flex;flex:none}
+.avatars img{width:44px;height:44px;border-radius:50%;border:3px solid #fff;background:var(--sky);object-fit:cover}
+.avatars img+img{margin-left:-12px}
+
+.hero__visual{position:relative;height:440px;margin:0 -16px}
+.hero__person{position:absolute;right:2%;bottom:0;height:100%}
+.hero__person img{height:100%;width:auto;max-width:none}
+
+/* CTA (statement) */
+.cta{position:relative;overflow:hidden;padding-bottom:0}
+.cta__grid{display:grid;gap:8px}
+.cta__copy{padding-bottom:12px}
+.cta__txt{font:800 clamp(1.6rem,3.4vw,2.7rem)/1.12 var(--font);letter-spacing:-.035em;text-wrap:balance;max-width:20em}
+.cta__sub{margin-top:18px;max-width:34em;color:var(--muted)}
+.cta__copy .btn-pill{margin-top:26px}
+.cta__man{position:relative;order:2;height:300px;display:flex;justify-content:center;margin-top:8px}
+.cta__man .pwrap{height:100%}
+.cta__man img{height:100%;width:auto;max-width:none}
+.cta__man .pwrap{display:flex}
+
+/* Platform */
+.head-row{display:grid;gap:14px}
+.plat{margin-top:34px;display:grid;gap:22px}
+.app{border-radius:var(--r-lg);background:#fff;border:1px solid var(--line);overflow:hidden;box-shadow:0 18px 44px rgba(15,42,122,.10)}
+.app__top{display:flex;align-items:center;gap:12px;padding:12px 16px;background:var(--sky);border-bottom:1px solid var(--line);font-size:.8125rem}
+.app__dots{display:inline-flex;gap:6px}
+.app__dots i{width:10px;height:10px;border-radius:50%;background:#B9C8EE}
+.app__file{font-weight:700;overflow-wrap:anywhere}
+.app__tag{margin-left:auto;color:var(--muted)}
+.app__body{display:grid}
+.app__list{padding:12px;display:grid;gap:6px;align-content:start;background:var(--sky-50);border-bottom:1px solid var(--line)}
+.rowbtn{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 14px;border:1px solid transparent;border-radius:14px;
+  background:transparent;color:var(--ink);font:600 .9375rem/1.2 var(--font);text-align:left;cursor:pointer;transition:background-color .15s,border-color .15s;
+}
+.rowbtn:hover{background:#fff}
+.rowbtn.is-on{background:#fff;border-color:#B9CDF8;box-shadow:0 4px 14px rgba(15,42,122,.08)}
+.rowbtn b{color:var(--muted);margin-right:4px}
+.sev{flex:none;font-style:normal;padding:3px 10px;border-radius:999px;font-size:.75rem;font-weight:800}
+.sev--high{background:var(--red-bg);color:var(--red)}
+.sev--med{background:#FFF1D6;color:#9A5B00}
+.sev--low{background:var(--green-bg);color:var(--green)}
+.app__detail{padding:20px}
+.d__head{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.d__head h3{font:800 1.25rem/1.2 var(--font);letter-spacing:-.02em}
+.d__exp{margin-top:14px;padding:14px 16px;border-radius:16px;background:var(--red-bg);display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.d__exp span{font-size:.875rem;font-weight:600;color:var(--muted)}
+.d__exp b{font:800 1.9rem/1 var(--font);letter-spacing:-.04em;color:var(--red)}
+.d__exp b i{font-style:normal}
+.d__why{margin-top:14px;color:var(--muted);font-size:.9688rem}
+.d__clause{margin-top:14px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);font:500 1.0625rem/1.75 var(--serif)}
+.d__clause del{
+  text-decoration:none;color:var(--red);background-color:var(--red-bg);
+  background-image:linear-gradient(var(--red),var(--red));background-repeat:no-repeat;background-position:0 58%;background-size:100% 2px;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 2px;
+}
+.d__clause ins{text-decoration:none;color:var(--green);background:var(--green-bg);font-weight:600;box-decoration-break:clone;-webkit-box-decoration-break:clone;padding:0 2px}
+.app__detail.is-swap{animation:qa .3s ease}
+.feat{display:grid;gap:12px;align-content:center}
+.feat li{display:flex;gap:16px;align-items:flex-start;padding:20px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.feat__ic{flex:none;width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center}
+.feat h3{font:700 1.15rem/1.25 var(--font);letter-spacing:-.02em}
+.feat p{margin-top:4px;color:var(--muted);font-size:.9688rem}
+
+/* People */
+.people{display:grid;gap:26px;align-items:center}
+.people__art{position:relative;height:340px;border-radius:var(--r-lg);overflow:hidden;background:#EAF1FF}
+.people__art .pwrap{position:absolute;inset:-7% 0}
+.people__art img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.ticks{margin-top:22px;display:grid;gap:10px}
+.ticks li{display:flex;align-items:center;gap:12px;font-weight:600}
+.ticks svg{flex:none;width:26px;height:26px;padding:5px;border-radius:50%;background:#fff;color:var(--blue);stroke-width:2.6}
+.people__copy .btn-pill{margin-top:26px}
+
+/* Clauses */
+.cards{margin-top:34px;display:grid;gap:12px}
+.card{
+  position:relative;overflow:hidden;min-height:230px;padding:22px;border-radius:var(--r-lg);
+  background:var(--sky-50);border:1px solid var(--line);display:flex;flex-direction:column;
+}
+.card__num{position:absolute;right:14px;top:-6px;font:800 5.5rem/1 var(--font);letter-spacing:-.06em;color:var(--blue);opacity:.1;pointer-events:none}
+.card__ic{width:44px;height:44px;border-radius:14px;background:#fff;color:var(--blue);display:grid;place-items:center;border:1px solid var(--line)}
+.card h3{margin-top:30px;font:700 1.25rem/1.2 var(--font);letter-spacing:-.02em}
+.card p{margin-top:8px;color:var(--muted);font-size:.9688rem}
+.card__link{margin-top:auto;padding-top:16px;font-size:.9rem;font-weight:700;color:var(--blue);text-decoration:none;display:inline-flex;gap:6px;align-items:center}
+.card__link:hover{text-decoration:underline}
+.card--cta{color:#fff;border:0;background:radial-gradient(circle at 80% 15%,rgba(255,255,255,.28),transparent 36%),radial-gradient(circle at 15% 90%,rgba(255,255,255,.18),transparent 40%),var(--blue)}
+.card--cta h3{margin-top:0;font-size:2.4rem;letter-spacing:-.04em}
+.card--cta p{color:rgba(255,255,255,.88)}
+.card--cta .btn-pill{margin-top:auto}
+
+/* Savings */
+.save-grid{display:grid;gap:28px}
+.save-grid>*{min-width:0}
+.bars{margin-top:28px;display:grid;gap:16px;max-width:520px}
+.bars__label{font-weight:700;margin-bottom:6px}
+.bars__track{border-radius:14px;background:rgba(255,255,255,.16);overflow:hidden}
+.bars__bar{
+  width:var(--w);min-height:56px;display:flex;align-items:center;justify-content:flex-end;padding:0 18px;border-radius:14px;
+  font:800 1.5rem/1 var(--font);letter-spacing:-.03em;white-space:nowrap;overflow:hidden;transition:width 1.2s cubic-bezier(.2,.8,.2,1) .2s;
+}
+.js .bars__bar{width:0}
+.js .is-in .bars__bar{width:var(--w)}
+.bars__bar--old{background:rgba(255,255,255,.55);color:var(--blue-950)}
+.bars__bar--new{background:#fff;color:var(--blue)}
+.save-note{margin-top:18px;color:rgba(255,255,255,.9)}
+.save-note b{color:#fff}
+.big{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.big div{min-width:0;padding:18px;border-radius:var(--r-lg);background:#fff;color:var(--ink)}
+.big div.big--warn{background:var(--red-bg)}
+.big b{display:block;font:800 clamp(1.45rem,5.6vw,3rem)/1 var(--font);letter-spacing:-.05em;overflow-wrap:anywhere}
+.big b i{font-style:normal;color:var(--blue)}
+.big .big--warn b i{color:var(--red)}
+.big span{display:block;margin-top:10px;font-size:.9rem;line-height:1.4;color:var(--muted)}
+
+/* Steps */
+.steps{margin-top:34px;display:grid;gap:12px}
+.step{position:relative;overflow:hidden;padding:24px;border-radius:var(--r-lg);background:var(--sky-50);border:1px solid var(--line)}
+.step__num{position:absolute;right:16px;top:-4px;font:800 5rem/1 var(--font);letter-spacing:-.06em;color:var(--blue);opacity:.1}
+.step__ic{width:48px;height:48px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center}
+.step h3{margin-top:22px;font:700 1.3rem/1.2 var(--font);letter-spacing:-.02em}
+.step p{margin-top:8px;color:var(--muted)}
+
+/* Resources */
+.res-grid{margin-top:34px;display:grid;gap:12px}
+.checklist{padding:clamp(20px,3vw,32px);border-radius:var(--r-lg);background:var(--blue);color:#fff}
+.checklist h3{font:800 1.5rem/1.15 var(--font);letter-spacing:-.03em}
+.checklist__progress{margin-top:16px;display:flex;align-items:center;gap:12px;font-size:.9rem;font-weight:700}
+.checklist__track{flex:1;height:8px;border-radius:999px;background:rgba(255,255,255,.25);overflow:hidden}
+.checklist__fill{display:block;height:100%;width:0;border-radius:inherit;background:#fff;transition:width .3s ease}
+.checks{margin-top:18px;display:grid;gap:8px}
+.check{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.12);cursor:pointer;line-height:1.4;font-size:.9688rem}
+.check input{position:absolute;opacity:0;width:1px;height:1px}
+.check__box{flex:none;width:24px;height:24px;border-radius:8px;border:2px solid rgba(255,255,255,.7);display:grid;place-items:center;color:var(--blue);transition:background-color .15s}
+.check__box svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.check input:checked+.check__box{background:#fff;border-color:#fff}
+.check input:checked+.check__box svg{opacity:1}
+.check input:focus-visible+.check__box{outline:3px solid #fff;outline-offset:2px}
+.check input:checked~span:last-child{opacity:.75;text-decoration:line-through;text-decoration-thickness:1px}
+.terms{padding:clamp(20px,3vw,32px);border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.terms h3{font:800 1.5rem/1.15 var(--font);letter-spacing:-.03em;margin-bottom:14px}
+.terms__note{margin-top:14px;font-size:.875rem;color:var(--muted)}
+
+/* Accordion */
+.qa{border-radius:18px;background:var(--sky-50);border:1px solid var(--line)}
+.qa+.qa{margin-top:8px}
+.qa summary{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;cursor:pointer;list-style:none;font:700 1.0625rem/1.35 var(--font);letter-spacing:-.01em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{
+  content:"";flex:none;width:30px;height:30px;border-radius:50%;
+  background:linear-gradient(var(--blue),var(--blue)) center/12px 2px no-repeat,linear-gradient(var(--blue),var(--blue)) center/2px 12px no-repeat,#fff;
+  border:1px solid var(--line);transition:transform .3s ease;
+}
+.qa[open] summary::after{transform:rotate(135deg)}
+.qa[open]{background:#fff;border-color:#B9CDF8}
+.qa__a{padding:0 20px 20px}
+.qa[open] .qa__a{animation:qa .3s ease}
+@keyframes qa{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.qa__a p{color:var(--muted);max-width:44em}
+.faq-grid{display:grid;gap:28px}
+
+/* Final + footer */
+.final{text-align:center}
+.final h2{max-width:11em;margin:0 auto;font:800 clamp(2.4rem,9vw,5.2rem)/.98 var(--font);letter-spacing:-.05em;text-wrap:balance}
+.final .lede{margin:18px auto 0}
+.final .btn-pill{margin-top:28px}
+.foot{margin-top:56px;padding-top:24px;border-top:1px solid rgba(255,255,255,.25);display:grid;gap:18px;text-align:left}
+.foot__top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 28px}
+.brand--light img,.nav.is-compact .brand--light img{height:35px}
+.foot__tag{max-width:26em;font-size:.9688rem;color:rgba(255,255,255,.86)}
+.foot__links{display:flex;flex-wrap:wrap;gap:6px 22px}
+.foot__links a{font-weight:600;text-decoration:none;color:#fff}
+.foot__links a:hover{text-decoration:underline}
+.trust{display:flex;flex-wrap:wrap;gap:10px}
+.trust li{display:inline-flex;align-items:center;gap:9px;padding:9px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.38);background:rgba(255,255,255,.12);font-size:.875rem;font-weight:600}
+.trust svg{width:18px;height:18px}
+.foot small{display:block;font-size:.84rem;line-height:1.55;color:rgba(255,255,255,.82)}
+.panel--blue :focus-visible{outline-color:#fff}
+
+/* Back to top */
+.totop{
+  position:fixed;z-index:55;right:14px;bottom:calc(92px + env(safe-area-inset-bottom));width:52px;height:52px;border:0;border-radius:50%;
+  background:#fff;color:var(--blue);display:grid;place-items:center;cursor:pointer;box-shadow:0 10px 28px rgba(15,42,122,.22);
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:opacity .25s,transform .25s,visibility 0s .25s;
+}
+.totop.show{opacity:1;visibility:visible;transform:none;transition-delay:0s}
+.totop svg{grid-area:1/1}
+.totop__ring{width:52px;height:52px;transform:rotate(-90deg)}
+.totop__ring circle{fill:none;stroke-width:3}
+.totop__ring .trk{stroke:var(--sky)}
+.totop__ring .bar{stroke:var(--blue);stroke-linecap:round;stroke-dasharray:131.95;stroke-dashoffset:131.95}
+.totop .ic{width:22px;height:22px;stroke-width:2.4}
+
+/* Sticky bar (mobile) */
+.sticky{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);
+  -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  transform:translateY(110%);transition:transform .3s ease;
+}
+.sticky.show{transform:none}
+.sticky .btn-pill{white-space:nowrap}
+.sticky p{font-size:.84rem;line-height:1.25;color:var(--muted)}
+.sticky p b{display:block;font:800 1.25rem/1.1 var(--font);letter-spacing:-.03em;color:var(--ink)}
+
+@media (min-width:700px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(3,1fr)}
+  .res-grid{grid-template-columns:1fr 1fr}
+}
+@media (min-width:960px){
+  body{padding-bottom:0}
+  .sticky{display:none}
+  .totop{right:24px;bottom:24px}
+  .nav__links{display:flex}
+  .nav__cta{display:inline-flex}
+  .nav__menu,.sheet{display:none}
+  .hero::after{background:linear-gradient(90deg,rgba(230,238,255,.78) 0%,rgba(230,238,255,.34) 52%,rgba(230,238,255,0) 82%)}
+  .hero__grid{grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:stretch}
+  .hero__copy{padding:30px 10px 40px 18px}
+  .hero h1{font-size:clamp(3.4rem,6.2vw,5rem)}
+  .hero__visual{height:auto;min-height:620px;margin:0 -48px 0 0}
+  .hero__person{right:6%}
+        .cta__grid{grid-template-columns:minmax(0,.34fr) minmax(0,.66fr);gap:40px;align-items:stretch}
+  .cta__copy{order:2;align-self:center;padding:0 0 clamp(24px,5vw,72px)}
+  .cta__man{order:1;height:380px;align-self:end;margin-top:0}
+  .head-row{grid-template-columns:1.1fr .9fr;align-items:end;gap:40px}
+  .plat{grid-template-columns:1.25fr .75fr;gap:24px;align-items:stretch}
+  .app__body{grid-template-columns:.8fr 1.2fr}
+  .app__list{border-bottom:0;border-right:1px solid var(--line)}
+  .people{grid-template-columns:1fr 1fr;gap:56px}
+  .people__art{height:460px}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .save-grid{grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .faq-grid{grid-template-columns:.8fr 1.2fr;gap:56px}
+  .faq-grid .faq-head{position:sticky;top:110px;align-self:start}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .hero__bg video{display:none}
+  .js [data-reveal]{opacity:1;transform:none;transition:none}
+  .js .bars__bar{width:var(--w);transition:none}
+  [data-parallax]{transform:none!important}
+  .nav,.nav__pill,.sheet,.sheet a.sheet__link,.sticky,.qa summary::after,.totop{transition:none}
+  .qa[open] .qa__a,.app__detail.is-swap{animation:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0L7.5 8.5M12 4l4.5 4.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M9 7h8v8"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></symbol>
+    <symbol id="i-exit" viewBox="0 0 24 24"><path d="M9 21H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3"/><path d="M16 17l5-5-5-5M21 12H9"/></symbol>
+    <symbol id="i-coin" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M14.5 9a2.5 2.5 0 0 0-2.5-1.5c-1.4 0-2.5.8-2.5 2s1 1.7 2.5 2 2.5.8 2.5 2-1.1 2-2.5 2A2.7 2.7 0 0 1 9.5 15M12 6v1.5M12 16.5V18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14h6M9 17h4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></symbol>
+    <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#upload">Skip to upload</a>
+
+<header class="nav" id="nav">
+  <div class="nav__bar">
+    <a class="brand" href="#top" aria-label="Redline MD home"><img src="images/logo-redline-md.svg" alt="Redline MD" width="198" height="30"></a>
+    <nav class="nav__links" id="navLinks" aria-label="Main">
+      <span class="nav__pill" id="navPill" aria-hidden="true"></span>
+      <a href="#platform">Platform</a>
+      <a href="#clauses">Clauses</a>
+      <a href="#savings">Savings</a>
+      <a href="#how">How it works</a>
+      <a href="#resources">Resources</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="nav__right">
+      <a class="btn-pill btn-pill--sm nav__cta" href="#upload">Upload contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a>
+      <button class="nav__menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Open menu">
+        <svg class="ic i-open" viewBox="0 0 24 24"><use href="#i-menu"/></svg>
+        <svg class="ic i-close" viewBox="0 0 24 24"><use href="#i-x"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="sheet" id="sheet">
+    <a class="sheet__link" href="#platform">Platform <svg class="ic" viewBox="0 0 24 24"><use href="#i-down"/></svg></a>
+    <a class="sheet__link" href="#clauses">Clauses <svg class="ic" viewBox="0 0 24 24"><use href="#i-down"/></svg></a>
+    <a class="sheet__link" href="#savings">Savings <svg class="ic" viewBox="0 0 24 24"><use href="#i-down"/></svg></a>
+    <a class="sheet__link" href="#how">How it works <svg class="ic" viewBox="0 0 24 24"><use href="#i-down"/></svg></a>
+    <a class="sheet__link" href="#resources">Resources <svg class="ic" viewBox="0 0 24 24"><use href="#i-down"/></svg></a>
+    <a class="sheet__link" href="#faq">FAQ <svg class="ic" viewBox="0 0 24 24"><use href="#i-down"/></svg></a>
+    <a class="btn-pill btn-pill--block sheet__cta" href="#upload">Upload contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="hero-title">
+    <!-- Background video: replace hero-bg.mp4 / hero-bg.webm with a busy (non-emergency) hospital scene. Shown at 30% opacity with a blue tint. -->
+    <div class="hero__bg" aria-hidden="true">
+      <div class="vwrap" data-parallax data-speed="0.12" data-max="46">
+        <video autoplay muted loop playsinline preload="auto" tabindex="-1" disablepictureinpicture poster="hero-bg-poster.jpg">
+          <source src="hero-bg.mp4" type="video/mp4">
+          <source src="hero-bg.webm" type="video/webm">
+        </video>
+      </div>
+    </div>
+    <div class="hero__inner">
+    <div class="hero__grid">
+      <div class="hero__copy">
+        <h1 id="hero-title"><span class="line">C<span class="o">o</span>ntract review</span><span class="line">before you sign.</span></h1>
+        <p class="hero__lead"><strong>Redline MD is an AI platform</strong> that reviews your physician employment contract and marks up what to negotiate, for <strong>a flat $199</strong> instead of $500+ for a traditional legal review.</p>
+
+        <div class="up" id="upload">
+          <label class="drop" id="drop" for="file">
+            <input class="sr" type="file" id="file" accept=".pdf,.doc,.docx">
+            <span class="drop__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span>
+            <span class="drop__txt">
+              <span class="drop__title" id="dropTitle">Drop your contract here</span>
+              <span class="drop__sub" id="dropSub">or tap to choose a PDF or Word file</span>
+            </span>
+          </label>
+          <button class="btn-pill btn-pill--block" id="cta" type="button"><span id="ctaTxt">Get my redline, $199</span><span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></button>
+          <p class="up__fine">Flat price. No hourly fees.</p>
+          <p class="up__status" id="status" role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="mini" aria-label="Key numbers">
+          <div><b>$199</b><span>flat price per review</span></div>
+          <div><b>$500<i>+</i></b><span>traditional legal review</span></div>
+          <div><b>$10,000<i>+</i></b><span>tail insurance risk</span></div>
+        </div>
+
+        <div class="who">
+          <span class="avatars" aria-hidden="true"><img src="images/avatar-1.webp" alt="" width="44" height="44"><img src="images/avatar-2.webp" alt="" width="44" height="44"><img src="images/avatar-3.webp" alt="" width="44" height="44"><img src="images/avatar-4.webp" alt="" width="44" height="44"></span>
+          <p>Made for physicians signing their first employment contract.</p>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__person" data-parallax data-speed="0.07" data-max="40" data-min="0">
+          <img src="images/hero-doctor.webp" width="558" height="911" fetchpriority="high" alt="Smiling newly graduated physician in a white coat with a stethoscope">
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <div class="shell">
+
+  <!-- CTA -->
+  <section class="panel cta" aria-labelledby="statement-title">
+    <div class="cta__grid">
+      <div class="cta__copy" data-reveal>
+        <h2 class="cta__txt" id="statement-title">We pair AI speed with a clause-by-clause view, so every new physician can negotiate a first contract feeling informed and calm.</h2>
+        <p class="cta__sub">Built for newly graduated doctors entering employment contracts. A flat $199, instead of $500+ for a traditional legal review.</p>
+        <a class="btn-pill" href="#upload">Upload my contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a>
+      </div>
+      <div class="cta__man">
+        <div class="pwrap" data-parallax data-speed="0.08" data-max="36" data-min="0">
+          <img src="images/recommend-man.webp" width="654" height="795" loading="lazy" alt="Smiling physician holding a phone that shows the Redline MD app">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM -->
+  <section class="panel panel--sky" id="platform" aria-labelledby="platform-title">
+    <div class="head-row" data-reveal>
+      <h2 class="title" id="platform-title">An AI platform built for physician contracts</h2>
+      <p class="lede">Redline MD's proprietary technology reads your employment agreement, highlights the risks, estimates what they could cost and drafts the redline.</p>
+    </div>
+    <div class="plat">
+      <div class="app" data-reveal aria-label="Illustrative view of the Redline MD platform">
+        <div class="app__top"><span class="app__dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="app__file">Employment_Agreement.pdf</span><span class="app__tag">Illustrative interface</span></div>
+        <div class="app__body">
+          <ul class="app__list" role="tablist" aria-label="Flagged clauses">
+            <li><button class="rowbtn is-on" type="button" role="tab" aria-selected="true" data-k="tail"><span><b>7.3</b> Tail coverage</span><em class="sev sev--high">High</em></button></li>
+            <li><button class="rowbtn" type="button" role="tab" aria-selected="false" data-k="noncompete"><span><b>9.1</b> Non-compete</span><em class="sev sev--med">Medium</em></button></li>
+            <li><button class="rowbtn" type="button" role="tab" aria-selected="false" data-k="termination"><span><b>11.2</b> Termination</span><em class="sev sev--med">Medium</em></button></li>
+            <li><button class="rowbtn" type="button" role="tab" aria-selected="false" data-k="comp"><span><b>4.1</b> Compensation</span><em class="sev sev--low">Low</em></button></li>
+          </ul>
+          <div class="app__detail" id="detail" role="tabpanel" aria-live="polite">
+            <div class="d__head"><h3>7.3 Tail coverage</h3><em class="sev sev--high">High risk</em></div>
+            <p class="d__exp"><span>Estimated exposure</span><b>$10,000<i>+</i></b></p>
+            <p class="d__why">If you pay for tail coverage when you leave, the bill can arrive with your next job change.</p>
+            <p class="d__clause">Upon termination for any reason, <del>Physician shall procure and pay for</del> <ins>Employer shall provide and pay for</ins> extended reporting (tail) coverage.</p>
+          </div>
+        </div>
+      </div>
+      <ul class="feat" data-stagger>
+        <li><span class="feat__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-shield"/></svg></span><div><h3>Highlights contract risks</h3><p>Flags the clauses that can cost you money or flexibility, clause by clause.</p></div></li>
+        <li><span class="feat__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-coin"/></svg></span><div><h3>Estimates financial exposure</h3><p>Shows what a clause could cost you, such as $10,000+ for an unnegotiated tail clause.</p></div></li>
+        <li><span class="feat__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-file"/></svg></span><div><h3>Drafts the redline</h3><p>Proposes changes you can bring to your employer before you sign.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PEOPLE -->
+  <section class="panel panel--blue" id="people" aria-labelledby="people-title">
+    <div class="people">
+      <div class="people__art" data-reveal>
+        <div class="pwrap" data-parallax data-speed="0.05" data-max="34">
+          <img src="images/couple.webp" width="1400" height="681" loading="lazy" alt="Two smiling newly graduated physicians in white coats standing in a bright hospital corridor">
+        </div>
+      </div>
+      <div class="people__copy" data-reveal style="--d:.12s">
+        <h2 class="title" id="people-title">Made for physicians at the start of their careers</h2>
+        <p class="lede">Your first employment contract shapes your income and your freedom to move on. Redline MD helps new physicians see what is in it before they sign.</p>
+        <ul class="ticks">
+          <li><svg class="ic" viewBox="0 0 24 24"><use href="#i-check"/></svg>See the risks before you sign</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><use href="#i-check"/></svg>Know exactly what to ask for</li>
+          <li><svg class="ic" viewBox="0 0 24 24"><use href="#i-check"/></svg>Pay a flat $199, not an hourly fee</li>
+        </ul>
+        <a class="btn-pill btn-pill--white" href="#upload">Upload contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLAUSES -->
+  <section class="panel panel--sky" id="clauses" aria-labelledby="clauses-title">
+    <div class="head-row" data-reveal>
+      <h2 class="title" id="clauses-title">Clauses worth a second look</h2>
+      <p class="lede">These are the terms that most often cost new physicians money or flexibility later. Each one links to a plain-language explanation.</p>
+    </div>
+    <div class="cards" data-stagger>
+      <article class="card"><span class="card__num" aria-hidden="true">01</span>
+        <span class="card__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-clock"/></svg></span>
+        <h3>Tail coverage</h3><p>Who pays for extended reporting coverage when you leave, and how much it could cost.</p>
+        <a class="card__link" href="#term-tail">Why it matters <svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a></article>
+      <article class="card"><span class="card__num" aria-hidden="true">02</span>
+        <span class="card__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-ban"/></svg></span>
+        <h3>Non-compete</h3><p>How far and for how long you are restricted from practicing after you leave.</p>
+        <a class="card__link" href="#term-noncompete">Why it matters <svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a></article>
+      <article class="card"><span class="card__num" aria-hidden="true">03</span>
+        <span class="card__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-exit"/></svg></span>
+        <h3>Termination terms</h3><p>Notice periods, and whether either side can end the contract without cause.</p>
+        <a class="card__link" href="#term-termination">Why it matters <svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a></article>
+      <article class="card"><span class="card__num" aria-hidden="true">04</span>
+        <span class="card__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-coin"/></svg></span>
+        <h3>Compensation and bonus</h3><p>How pay, bonuses and targets are defined, and when they can change.</p>
+        <a class="card__link" href="#term-signon">Why it matters <svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a></article>
+      <article class="card"><span class="card__num" aria-hidden="true">05</span>
+        <span class="card__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-shield"/></svg></span>
+        <h3>Malpractice coverage</h3><p>Claims-made or occurrence, coverage limits, and who carries the policy.</p>
+        <a class="card__link" href="#term-claims">Why it matters <svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></a></article>
+      <article class="card card--cta">
+        <h3>$199 flat</h3><p>One price for your contract review, versus $500+ for a traditional legal review.</p>
+        <a class="btn-pill btn-pill--white" href="#upload">Upload contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a></article>
+    </div>
+  </section>
+
+  <!-- SAVINGS -->
+  <section class="panel panel--blue" id="savings" aria-labelledby="savings-title">
+    <div class="save-grid">
+      <div data-reveal>
+        <h2 class="title" id="savings-title">A review should cost less than the mistake it prevents.</h2>
+        <p class="lede">Many new physicians sign without a review because a legal one costs $500 or more. Redline MD costs $199 and flags the clauses that can cost you far more later.</p>
+        <div class="bars" role="img" aria-label="Price comparison: traditional legal review $500 plus, Redline MD $199">
+          <div><p class="bars__label">Traditional legal review</p><div class="bars__track"><div class="bars__bar bars__bar--old" style="--w:100%">$500+</div></div></div>
+          <div><p class="bars__label">Redline MD</p><div class="bars__track"><div class="bars__bar bars__bar--new" style="--w:39.8%">$199</div></div></div>
+        </div>
+        <p class="save-note"><b>You keep $301 or more</b> compared with a traditional review.</p>
+      </div>
+      <div class="big" data-stagger>
+        <div><b>$199</b><span>flat price for your redline</span></div>
+        <div><b>$500<i>+</i></b><span>typical traditional legal review</span></div>
+        <div><b>$301<i>+</i></b><span>kept in your pocket versus a $500 review</span></div>
+        <div class="big--warn"><b>$10,000<i>+</i></b><span>what an unnegotiated tail insurance clause can cost you</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW -->
+  <section class="panel" id="how" aria-labelledby="how-title">
+    <div class="head-row" data-reveal>
+      <h2 class="title" id="how-title">From offer letter to confident negotiation in three steps</h2>
+      <p class="lede">No forms to fill out first. Upload, read your redline, and go back to your employer with specifics.</p>
+    </div>
+    <ol class="steps" data-stagger>
+      <li class="step"><span class="step__num" aria-hidden="true">1</span><span class="step__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span>
+        <h3>Upload your contract</h3><p>Add the file your employer sent you.</p></li>
+      <li class="step"><span class="step__num" aria-hidden="true">2</span><span class="step__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-file"/></svg></span>
+        <h3>Review your redline</h3><p>See every risky clause marked up, with the proposed change and the reason for it.</p></li>
+      <li class="step"><span class="step__num" aria-hidden="true">3</span><span class="step__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-check"/></svg></span>
+        <h3>Negotiate with confidence</h3><p>Ask for specific changes before you sign, not after.</p></li>
+    </ol>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="panel panel--sky" id="resources" aria-labelledby="res-title">
+    <div class="head-row" data-reveal>
+      <h2 class="title" id="res-title">Free resources before you sign</h2>
+      <p class="lede">Use the checklist on any physician contract, even before you upload one. Then read what each term means in plain language.</p>
+    </div>
+    <div class="res-grid">
+      <div class="checklist" id="checklist" data-reveal>
+        <h3>7 questions to ask about any physician contract</h3>
+        <div class="checklist__progress"><span class="checklist__track" aria-hidden="true"><span class="checklist__fill" id="fill"></span></span><span id="count" aria-live="polite">0 of 7 checked</span></div>
+        <div class="checks">
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>Who pays for tail coverage when I leave?</span></label>
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>Is my malpractice policy claims-made or occurrence?</span></label>
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>How far and for how long does the non-compete reach?</span></label>
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>Can either side end the contract without cause, and with how much notice?</span></label>
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>How are my pay, bonus and productivity targets defined, and when can they change?</span></label>
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>What do I owe back if I leave early (sign-on, relocation, loan repayment)?</span></label>
+<label class="check"><input type="checkbox"><span class="check__box" aria-hidden="true"><svg viewBox="0 0 24 24"><use href="#i-check"/></svg></span><span>Who can change the contract later, and how?</span></label>
+        </div>
+      </div>
+      <div class="terms" data-reveal style="--d:.1s">
+        <h3>Contract terms, explained</h3>
+<details class="qa qa--term" id="term-tail" open><summary>Tail coverage</summary><div class="qa__a"><p>Many malpractice policies are claims-made: they only cover claims filed while the policy is active. When you leave a job, you need tail coverage (an extended reporting endorsement) or the next employer&#x27;s policy must include prior acts coverage. Who pays for it is often set in your contract, and the cost can reach $10,000 or more.</p></div></details>
+<details class="qa qa--term" id="term-claims"><summary>Claims-made vs. occurrence</summary><div class="qa__a"><p>An occurrence policy covers incidents that happen during the policy period, no matter when the claim is filed, so it needs no tail. A claims-made policy covers claims filed while it is active, so leaving requires tail or prior acts coverage. Ask which one your employer carries.</p></div></details>
+<details class="qa qa--term" id="term-noncompete"><summary>Non-compete clauses</summary><div class="qa__a"><p>A non-compete limits where and for how long you can practice after you leave. Check the radius, the length of time and which facilities it covers. Enforceability varies by state, so a clause that looks harsh may or may not hold up.</p></div></details>
+<details class="qa qa--term" id="term-termination"><summary>Termination without cause</summary><div class="qa__a"><p>Many contracts let either side end the agreement without cause after a notice period. Check how much notice you must give, what happens to pay and benefits during that time, and who pays for tail coverage when you go.</p></div></details>
+<details class="qa qa--term" id="term-signon"><summary>Sign-on bonus repayment</summary><div class="qa__a"><p>Sign-on bonuses, relocation payments and loan repayment help are often repayable if you leave early. Look for the repayment schedule, what triggers it and whether it is pro-rated.</p></div></details>
+        <p class="terms__note">General information, not legal advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="panel" id="faq" aria-labelledby="faq-title">
+    <div class="faq-grid">
+      <div class="faq-head" data-reveal>
+        <h2 class="title" id="faq-title">Questions physicians ask before they upload</h2>
+        <p class="lede">Short answers about price, what the redline covers, and what Redline MD is and is not.</p>
+        <a class="btn-pill" href="#upload" style="margin-top:24px">Upload contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a>
+      </div>
+      <div class="faq-list" data-reveal style="--d:.1s">
+<details class="qa" open><summary>What is the Redline MD AI platform?</summary><div class="qa__a"><p>Redline MD is an AI platform that reviews physician employment contracts. Its proprietary technology highlights risky clauses, estimates financial exposure and drafts a redline you can bring to your employer, for a flat $199.</p></div></details>
+<details class="qa"><summary>How much does a contract review cost?</summary><div class="qa__a"><p>A review costs a flat $199. A traditional legal review costs $500 or more, so you keep at least $301 compared with that.</p></div></details>
+<details class="qa"><summary>Who is Redline MD for?</summary><div class="qa__a"><p>Redline MD is designed for newly graduated physicians who are about to sign an employment contract and want to understand it before they do.</p></div></details>
+<details class="qa"><summary>What is tail insurance and why does it matter?</summary><div class="qa__a"><p>Tail insurance, also called extended reporting coverage, protects you from malpractice claims filed after a claims-made policy ends. If your contract makes you pay for it when you leave, the cost can reach $10,000 or more. Checking who pays before you sign lets you negotiate it.</p></div></details>
+<details class="qa"><summary>What does the redline include?</summary><div class="qa__a"><p>The redline marks clauses that put you at risk, such as tail coverage, non-compete terms and termination language, and shows proposed changes you can bring to your employer.</p></div></details>
+<details class="qa"><summary>Does Redline MD replace a lawyer?</summary><div class="qa__a"><p>No. Redline MD is an AI tool, not a law firm, and it does not provide legal advice. It gives you a fast, lower-cost first review and a clearer picture of what to negotiate. For complex situations, consider asking an attorney.</p></div></details>
+<details class="qa"><summary>How do I use the redline in a negotiation?</summary><div class="qa__a"><p>Treat the marked clauses as a checklist of what to ask for: who pays for tail coverage, how far a non-compete reaches, how termination works. Bring the proposed changes to your employer and negotiate before you sign.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA + FOOTER -->
+  <section class="panel panel--blue final" id="final" aria-labelledby="final-title">
+    <div data-reveal>
+      <h2 id="final-title">Review it before you sign it.</h2>
+      <p class="lede">Upload your contract and get your redline for a flat $199.</p>
+      <a class="btn-pill btn-pill--white" href="#upload">Upload my contract<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-upload"/></svg></span></a>
+    </div>
+    <footer class="foot">
+      <div class="foot__top">
+        <a class="brand brand--light" href="#top" aria-label="Redline MD home"><img src="images/logo-redline-md-white.svg" alt="Redline MD" width="231" height="35"></a>
+        <p class="foot__tag">AI contract review for physicians. Know what you are signing.</p>
+      </div>
+      <ul class="trust" aria-label="Trust notes">
+        <li><svg class="ic" viewBox="0 0 24 24"><use href="#i-lock"/></svg>Encrypted connection (HTTPS)</li>
+        <li><svg class="ic" viewBox="0 0 24 24"><use href="#i-tag"/></svg>Flat $199, no hourly fees</li>
+      </ul>
+      <!--
+        Security and compliance badges: add ONLY after the client provides proof (audit report, certificate, policy).
+        Examples to enable later:
+        <li>SOC 2 Type II</li>  <li>ISO 27001</li>  <li>AES-256 encryption at rest</li>  <li>HIPAA-aligned handling</li>
+      -->
+      <div class="foot__links">
+        <a href="#platform">Platform</a><a href="#clauses">Clauses</a><a href="#savings">Savings</a><a href="#how">How it works</a><a href="#resources">Resources</a><a href="#faq">FAQ</a>
+      </div>
+      <small>&copy; 2026 Redline MD. All rights reserved.</small>
+      <small>Redline MD uses AI to analyze contracts and is not a law firm. Its output is general information and not legal advice.</small>
+    </footer>
+  </section>
+  </div>
+</main>
+
+<button class="totop" id="totop" type="button" aria-label="Back to top">
+  <svg class="totop__ring" viewBox="0 0 48 48" aria-hidden="true"><circle class="trk" cx="24" cy="24" r="21"/><circle class="bar" id="ring" cx="24" cy="24" r="21"/></svg>
+  <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-up"/></svg>
+</button>
+
+<div class="sticky" id="sticky" aria-hidden="true">
+  <p><b>$199 flat</b>vs. $500+ legal review</p>
+  <a class="btn-pill btn-pill--sm" href="#upload" tabindex="-1">Get my redline<span class="btn-pill__ic"><svg class="ic" viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Upload ---------- */
+  var file=document.getElementById('file'),drop=document.getElementById('drop'),
+      title=document.getElementById('dropTitle'),sub=document.getElementById('dropSub'),
+      cta=document.getElementById('cta'),ctaTxt=document.getElementById('ctaTxt'),status=document.getElementById('status');
+  function showFile(){
+    var f=file.files&&file.files[0]; if(!f)return;
+    var size=f.size>=1048576?(f.size/1048576).toFixed(1)+' MB':Math.max(1,Math.round(f.size/1024))+' KB';
+    title.textContent=f.name; sub.textContent=size+', ready. Tap to change the file.';
+    drop.classList.add('has-file'); ctaTxt.textContent='Continue to checkout, $199'; status.textContent='';
+  }
+  file.addEventListener('change',showFile);
+  ['dragenter','dragover'].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.add('over');});});
+  ['dragleave','drop'].forEach(function(e){drop.addEventListener(e,function(ev){ev.preventDefault();drop.classList.remove('over');});});
+  drop.addEventListener('drop',function(ev){if(ev.dataTransfer&&ev.dataTransfer.files.length){file.files=ev.dataTransfer.files;showFile();}});
+  cta.addEventListener('click',function(){
+    if(!file.files||!file.files.length){file.click();return;}
+    status.textContent='Prototype only. Secure checkout would start here.';
+  });
+
+  /* ---------- Nav: always visible; transparent on top, white after scrolling ---------- */
+  var nav=document.getElementById('nav'),links=document.getElementById('navLinks'),
+      pill=document.getElementById('navPill'),menuBtn=document.getElementById('menuBtn');
+  var anchors=[].slice.call(links.querySelectorAll('a')),activeLink=null;
+  function movePill(a){
+    if(!a){pill.style.opacity=0;return;}
+    pill.style.width=a.offsetWidth+'px';
+    pill.style.transform='translateX('+a.offsetLeft+'px)';
+    pill.style.opacity=1;
+  }
+  anchors.forEach(function(a){
+    a.addEventListener('mouseenter',function(){movePill(a);});
+    a.addEventListener('focus',function(){movePill(a);});
+  });
+  links.addEventListener('mouseleave',function(){movePill(activeLink);});
+  links.addEventListener('focusout',function(){movePill(activeLink);});
+  function setActive(id){
+    activeLink=null;
+    anchors.forEach(function(a){var on=a.getAttribute('href')==='#'+id;a.classList.toggle('is-active',on);if(on)activeLink=a;});
+    movePill(activeLink);
+  }
+  if('IntersectionObserver' in window){
+    var seen={};
+    var so=new IntersectionObserver(function(es){
+      es.forEach(function(e){seen[e.target.id]=e.isIntersecting?e.intersectionRatio:0;});
+      var best=null,bv=0;for(var k in seen){if(seen[k]>bv){bv=seen[k];best=k;}}
+      if(window.scrollY<200)best=null;
+      setActive(best);
+    },{rootMargin:'-30% 0px -50% 0px',threshold:[0,.1,.25,.5,.75,1]});
+    ['platform','clauses','savings','how','resources','faq'].forEach(function(i){so.observe(document.getElementById(i));});
+  }
+  window.addEventListener('resize',function(){movePill(activeLink);});
+  function setMenu(open){
+    nav.classList.toggle('is-open',open);
+    menuBtn.setAttribute('aria-expanded',open?'true':'false');
+    menuBtn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  }
+  menuBtn.addEventListener('click',function(){setMenu(!nav.classList.contains('is-open'));});
+  [].forEach.call(document.querySelectorAll('#sheet a'),function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false);});
+
+  /* ---------- Scroll: compact nav, back-to-top ring, parallax ---------- */
+  var totop=document.getElementById('totop'),ring=document.getElementById('ring'),CIRC=131.95;
+  var par=[].slice.call(document.querySelectorAll('[data-parallax]')),ticking=false;
+  function frame(){
+    var y=window.scrollY||0,vh=window.innerHeight,doc=document.documentElement;
+    nav.classList.toggle('is-compact',y>24);
+    var max=Math.max(1,doc.scrollHeight-vh);
+    ring.style.strokeDashoffset=(CIRC*(1-Math.min(1,y/max))).toFixed(1);
+    totop.classList.toggle('show',y>600);
+    if(!reduce){
+      var k=window.innerWidth<700?.6:1;
+      par.forEach(function(el){
+        var host=el.parentElement,r=host.getBoundingClientRect();
+        if(r.bottom<-200||r.top>vh+200)return;
+        var off=(r.top+r.height/2)-vh/2,sp=parseFloat(el.getAttribute('data-speed'))||0,mx=parseFloat(el.getAttribute('data-max'))||60;
+        var mn=el.hasAttribute('data-min')?parseFloat(el.getAttribute('data-min')):-mx;
+        var ty=Math.max(mn,Math.min(mx,-off*sp*k));
+        el.style.transform='translate3d(0,'+ty.toFixed(1)+'px,0)';
+      });
+    }
+    ticking=false;
+  }
+  function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(frame);}}
+  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('resize',onScroll);
+  frame();
+  totop.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});});
+
+  /* ---------- Reveal on scroll ---------- */
+  [].forEach.call(document.querySelectorAll('[data-stagger]'),function(g){
+    [].forEach.call(g.children,function(c,i){c.setAttribute('data-reveal','');c.style.setProperty('--d',(i*.08)+'s');});
+  });
+  var rv=[].slice.call(document.querySelectorAll('[data-reveal]'));
+  if('IntersectionObserver' in window&&!reduce){
+    var ro=new IntersectionObserver(function(es){
+      es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');ro.unobserve(e.target);}});
+    },{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    rv.forEach(function(el){ro.observe(el);});
+  }else{rv.forEach(function(el){el.classList.add('is-in');});}
+
+  /* ---------- Open the matching term when a card link is used ---------- */
+  function openHash(){
+    var h=location.hash; if(!h||h.length<2)return;
+    var el=document.getElementById(h.slice(1));
+    if(el&&el.tagName==='DETAILS')el.open=true;
+  }
+  window.addEventListener('hashchange',openHash); openHash();
+  [].forEach.call(document.querySelectorAll('.faq-list,.terms'),function(group){
+    group.addEventListener('toggle',function(e){
+      if(!e.target.open)return;
+      [].forEach.call(group.querySelectorAll('details[open]'),function(d){if(d!==e.target)d.open=false;});
+    },true);
+  });
+
+  /* ---------- Platform detail switcher ---------- */
+  var DATA={
+    tail:{h:'7.3 Tail coverage',sev:['sev--high','High risk'],exp:'$10,000',why:'If you pay for tail coverage when you leave, the bill can arrive with your next job change.',
+      pre:'Upon termination for any reason, ',del:'Physician shall procure and pay for',ins:'Employer shall provide and pay for',post:' extended reporting (tail) coverage.'},
+    noncompete:{h:'9.1 Non-compete',sev:['sev--med','Medium risk'],why:'A wide radius or a long term can keep you from practicing near home after you leave.',
+      pre:'Physician shall not practice medicine ',del:'for three (3) years within a fifty (50) mile radius',ins:'for one (1) year within a ten (10) mile radius',post:' of any Employer facility.'},
+    termination:{h:'11.2 Termination',sev:['sev--med','Medium risk'],why:'Short notice leaves you exposed, and long notice can lock you in.',
+      pre:'',del:'Employer may terminate without cause on thirty (30) days notice.',ins:'Either party may terminate without cause on ninety (90) days notice.',post:''},
+    comp:{h:'4.1 Compensation',sev:['sev--low','Low risk'],why:'Terms that let the employer change pay on its own make your income hard to plan.',
+      pre:'',del:'Employer may adjust compensation at its sole discretion.',ins:'Compensation may be changed only by mutual written agreement.',post:''}
+  };
+  var detail=document.getElementById('detail'),tabs=[].slice.call(document.querySelectorAll('.rowbtn'));
+  function renderDetail(k){
+    var d=DATA[k];if(!d)return;
+    detail.innerHTML='<div class="d__head"><h3>'+d.h+'</h3><em class="sev '+d.sev[0]+'">'+d.sev[1]+'</em></div>'+
+      (d.exp?'<p class="d__exp"><span>Estimated exposure</span><b>'+d.exp+'<i>+</i></b></p>':'')+
+      '<p class="d__why">'+d.why+'</p>'+
+      '<p class="d__clause">'+d.pre+'<del>'+d.del+'</del> <ins>'+d.ins+'</ins>'+d.post+'</p>';
+    detail.classList.remove('is-swap');void detail.offsetWidth;detail.classList.add('is-swap');
+    tabs.forEach(function(t){var on=t.getAttribute('data-k')===k;t.classList.toggle('is-on',on);t.setAttribute('aria-selected',on?'true':'false');});
+  }
+  tabs.forEach(function(t){t.addEventListener('click',function(){renderDetail(t.getAttribute('data-k'));});});
+
+  /* ---------- Checklist ---------- */
+  var boxes=[].slice.call(document.querySelectorAll('.check input')),fill=document.getElementById('fill'),count=document.getElementById('count');
+  function updateChecks(){
+    var n=boxes.filter(function(b){return b.checked;}).length;
+    fill.style.width=(n/boxes.length*100)+'%';
+    count.textContent=n+' of '+boxes.length+' checked';
+  }
+  boxes.forEach(function(b){b.addEventListener('change',updateChecks);});
+
+  /* ---------- Sticky mobile bar ---------- */
+  var sticky=document.getElementById('sticky'),vis={};
+  function updSticky(){
+    var any=Object.keys(vis).some(function(k){return vis[k];});
+    sticky.classList.toggle('show',!any); sticky.setAttribute('aria-hidden',any?'true':'false');
+  }
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){vis[e.target.id]=e.isIntersecting;});updSticky();},{threshold:.15});
+    ['upload','final'].forEach(function(id){var t=document.getElementById(id);vis[id]=false;io.observe(t);});
+  }
+})();
+</script>
+</body>
+</html>
